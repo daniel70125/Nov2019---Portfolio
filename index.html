@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section id="welcome">
+    <div id="navbar">
+        <ul>
+            <li><a id="pj" href="#">Projects</a></li>
+           <!-- <li><a href="contactPage.html">Contact Me</a></li> -->
+        </ul>
+    </div>
+    <div id="projects">
+        <ul>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="RPS.html">RPS</a></li>  
+            <li><a href="https://github.com/daniel70125/underscoreLibrary/blob/master/index.js">underscoreLibrary</a></li>
+        </ul>
+    </div>
+    <!-- Smoke video in background of top div -->
+    <video src="smoke.mp4" loop autoplay muted playsinline></video>
+        <h1>
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+        </h1>
+</section>
+<section id="main">
+            <div id="headline">
+            <h2>Daniel Wright | Web developer</h2>
+            <hr>
+        </div>
+    </section>
+    <section id="mainBox">
+    <div id= "aboutMe">
+        <h3 id="aboutMeH3">— I'm Daniel, a freelance developer & designer.</h3>
+        <p>I've always been interested in both design and development.
+        My skills are broad: from ux to design, front end with a little back end development.
+        Always eager to do better, I plan to fill up my "What I Do" box with as many 
+        languages as I can Learn! <br><br><br>
+        I'm available for remote work - if you would like to build something together,
+        <a id="getInTouch" href="#right-column">get in touch?</a>
+        </p>
+    </div>
+        <div style="text-align: center;" id= "skills">
+        <h3 style= "font-family: sans-serif; margin:2px; font-size:28px;" >What I Do</h3>
+        <p id="box1">Front-end</p>
+        <p id= "box2" >CSS3, Javascript, ES6, Angular</p> 
+        <p id="box1">Back-end</p>
+        <p id= "box2" >PHP, APIs, MySQL</p>
+        <p id="box1">Cloud</p>
+        <p id= "box2" >AWS, Google</p>
+        <p id="box1">Frameworks</p>
+        <p id= "box2" >Bootstrap 4</p>
+        <p id="box1">Source Control/Communication</p>
+        <p id= "box2" >Github, Slack</p>
+    </div>
+    <div style= "text-align:center" id= "quote">
+        <h3 style= "font-family: sans-serif; margin:2px; font-size:28px;" >Get in Touch?</h3>
+        <a id="links"  href="https://www.linkedin.com/in/daniel70125/" class="fa fa-linkedin hover"></a> 
+        <a id="links"  href="https://github.com/daniel70125" class="fa fa-github hover"></a> 
+        <a id="links"  href="tel:+5042368584" class="fa fa-phone hover"></a> 
+        <a id="links"  href="mailto: dwrighttt504@gmail.com" class="fa fa-envelope hover"></a>                
+    </div>
+</section>
+<section>
+    <div id="bio">
+        <p>
+            "I design and code beautifully simple things, and I love what I do!" - Me
+        </p>
+    </div>
+</section>
+
+    <!-- Contact info HTML -->
+    
+        <div id="container">
+        <div id="left-column">
+            <img src="Pictures/blackLogo.png"/>
+            <h2>
+                Want to work? Have an idea? 
+            </h2>
+        </div>
+        <aside id="right-column">
+            <form action="in.php" method="GET">
+                    <label for="rnameame">Name</label>
+                    <input type="text" placeholder="Full Name" name="rname"/>
+                    <label for="temail">Email</label>
+                    <input placeholder="Email" type="text" name="remail" />
+                    <label for="rnumber">Number</label>
+                    <input type="text" name="rnumber" placeholder="(000)-000-0000">
+                    <label for="rcomment">Message</label>
+                    <textarea style="height:150px" name="rcomment" placeholder="Write your message here..."></textarea>
+                    <input class="btn2" type="submit" value="Submit">
+                   <!-- <button class="btn2" onclick="openNav()" id="homeBtn" >Home Menu</button> -->
+                </form>
+        </aside>
+            <div id="main">
+                
+            </div>
+        </div>
+        
+        <footer>
+            <p style="color:orange; font-size: 19px">© D.Wright 2019 all rights reserved.</p>
+        </footer>
+        
+        <script>
+                $(document).ready(function(){
+        $("#pj").click(function(){
+        $("#projects").fadeIn("slow");    
+        });
+    });
+        </script>
+</body>
+</html>
+<!--[if lte IE 8]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->

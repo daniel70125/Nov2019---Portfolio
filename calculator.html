@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator V.1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style type="text/css" media="all">
+body {background: black;}    
+.container {
+    border:3px solid black;
+    box-shadow: 2%;
+    margin:auto;
+    margin-top:30px;
+    text-align:center;
+    width:70%;
+    box-sizing: border-box;
+    height:600px ;
+    padding:10px;
+    background: url('Pictures/math.jpg');
+    background-size: cover;
+    font-weight: bolder;
+}
+h1{color:white}
+#formBox {height: 300px;}
+#num1 {margin-left:18px; width:100px;}
+#num2 { width:100px;}
+p {display:inline; color:white}
+#answer {
+    color:white;
+    position: absolute;
+    right: 554px;
+    top: 510px;
+    height: 50px;
+    font-size: 47px;
+}
+}
+form > p {font-size: 22px;}
+li {
+    display: inline;
+    margin-left: 30px;
+}
+ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+    font-size: x-large;
+}
+#navbar, #projects {
+    height:50px;
+    width:80%;
+    text-align:center;
+    margin:auto;
+}
+#welcome {
+    height: auto;
+    background:#000;
+}
+#projects {display:none;}
+footer {
+ color:white;
+ text-align:center;
+ font-size:20px;
+ padding: 10px 0px 0px 0px;
+}
+@media screen and (max-width:759px) {
+    .container {
+        width:100%;
+        background-image: url('Pictures/calc.png');
+        height: 400px;
+    }
+    #answer {
+        position: unset;
+    }
+    p {
+        font-size: 25px;
+    }
+    button {
+        font-size: 20px;
+    }
+    #formBox {
+        height: 114px;
+    }
+    #operator {
+        font-size: 24px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section id="welcome">
+    <div id="navbar">
+        <ul>
+            <li><a style="color: white; text-decoration: none;" href="index.html">Home</a></li>
+        </ul>
+    </div>
+    </section>
+<div class="container">
+            <h1>Hand-Coded JavaScript Calculator</h1>
+            <div id="formBox">
+                <form>
+                    <p>First Number:</p> <input id="num1" type="text"> <br>
+                    <p>Second Number:</p> <input id="num2" type="text"> <br>
+                    <button type="button" onclick="calc()">Calculate</button>
+                    <select id="operator">
+                    <option value="add">Add</option>
+                    <option value="min">Subtract</option>
+                    <option value="div">Divide</option>
+                    <option value="mul">Multiply</option>
+                </select>
+                </form>
+            </div>
+            <div id="answer"> Answer?</div>
+            </div>
+            <footer>
+                <p style="font-size: 19px">© D.Wright 2019 all rights reserved.</p>
+            </footer>
+            <script type="text/javascript">
+                function calc() {
+                 var a = Number(document.querySelector("#num1").value);
+            var b = Number(document.querySelector("#num2").value);
+            var sum = document.querySelector("#operator").value;
+            var calculate;
+                
+                if (sum == "add") {
+                calculate = a + b;
+            } else if (sum == "mul") {
+                calculate = a * b;
+            } else if (sum == "min") {
+                calculate = a - b;
+            } else if (sum == "div") {
+                calculate = a / b;
+            }
+            document.querySelector("#answer").innerHTML = calculate;
+            }
+            
+            $(document).ready(function(){
+    $("#pj").click(function(){
+        $("#projects").fadeIn("slow");
+    });
+});
+            </script>
+</body>
+</html>
